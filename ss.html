@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Webpage Title -->
+    <title>나홀로 쇼핑몰</title>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+    <style type="text/css">
+        * {
+            font-family: 'Stylish', sans-serif;
+        }
+        .wrap {
+            width: 500px;
+            margin: auto;
+        }
+        .img {
+            background-image: url('https://www.conscious-skincare.com/wp-content/uploads/2016/02/glc-candle-lit-with-new-gift-box.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 500px;
+            height: 300px;
+        }
+        .info {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        h1, h5 {
+            display: inline;
+        }
+        .order {
+            text-align: center;
+        }
+        .orders {
+            margin-top: 100px;
+        }
+    </style>
+    <script>
+        function order() {
+            alert('주문완료')
+        }
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <div class="img"></div>
+    <div class="info">
+        <h1>상품제목</h1>
+        <h5>가격: 1,000,000원/개</h5>
+        <p>이 상품으로 말할것 같으면 용왕이 찾지 못한 토끼의 간을 찾아 빨강망토의 늑대와 아기돼지 삼형제의 숨결이 고루 녹아 있는 먹으면 120세 까지 살수 있다는 이 상품으로 말할것 같으면 용왕이 찾지못한 토끼의 간을 찾아 빨간망토의 늑대와 아기돼지...
+        </p>
+    </div>
+    <div class="info">
+        <h1>주문하기</h1>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            </div>
+            주문자 성함: <input type="text" class="form-control" id="order-name" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group mb-3">
+           수량:  <select class="custom-select" id="order-count">
+                <option selected value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            주소: <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3"></span>
+            </div>
+            <input type="text" class="form-control" id="order-address" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group mb-3">
+            전화번호: <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3"></span>
+            </div>
+            <input type="text" class="form-control" id="order-phone" aria-describedby="basic-addon3">
+        </div>
+        <div class="order">
+            <button onclick="order()" type="button" class="btn btn-primary">주문하기</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

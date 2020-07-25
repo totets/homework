@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>멍냥이 나노블럭 조립 KIT</title>
+
+    <!--템플릿 소스-->
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&family=Poor+Story&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!--CSS-->
+    <style>
+
+        .wrap {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .display-4 {
+            color: lightgoldenrodyellow;
+            font-size: 3em;
+        }
+
+        .jumbotron-fluid {
+            width: 600px;
+            background-color: gold;
+            font-family: 'Poor Story', cursive;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        .badge-secondary {
+            background-color: darkred;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .image {
+            background-image: url('http://img1.daumcdn.net/thumb/R720x0/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fliveboard%2Fshopping%2F2a4e588230194d27b4ad36330c12dbef.JPG');
+            background-size: cover;
+            background-position: center;
+            width: 550px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .form-wrap {
+            font-family: 'Jua', sans-serif;
+            border: 2px solid gold;
+            margin-bottom: 30px;
+
+            width: 600px;
+            border-radius: 5px;
+            padding: 40px
+        }
+
+        .lead {
+            text-align: center;
+        }
+
+        .order {
+            text-align: center;
+        }
+
+        .table-sm {
+            width: 600px;
+            font-family: 'Poor Story', cursive;
+            font-size: 0.9em;
+        }
+
+    </style>
+
+
+    <!--    자바스크립트 영역-->
+    <script>
+
+        function order() {
+            alert('주문해 주셔서 감사합니다!')
+        }
+
+/*        function checkSpace(str) {
+            if(str.search(/\s/) != -1) { return true; } else { return false; } }*/
+
+/*$(document).ready(function() {*/
+    function showFXRate() {
+        $.ajax({
+            type: "GET",
+            url: "https://api.manana.kr/exchange/rate.json",
+            data: {},
+            success: function (response) {
+                let FXRate = response[1]["rate"];
+                console.log(FXRate);
+                }
+            }
+        )}
+
+
+    </script>
+
+</head>
+
+<body>
+
+<div class="wrap">
+
+    <!--메인 이미지-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <img class="image" style="margin-bottom:10px">
+            <h1 class="display-4" style="text-align: center">동물 나노블럭 조립 KIT <span
+                    class="badge badge-secondary" onmouseover="showFXRate()">환율보기</span></h1>
+            <p id="showFXRate"></p>
+            <p class="lead" style="text-align: center">귀여운 동물들과 함께하는 귀엽고 행복한 일상! <br> 실제 사이즈 블럭으로 꿈을 이뤄보세요!</p>
+            <hr class="my-4">
+            <p style="text-align: center">열심히 조립하다 보면 눈앞에 귀여운 댕댕이가...! <br> 더 많은 상품을 보시려면 자세히보기 버튼을 클릭해 주세요 :)</p><br>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg"
+                   href="http://www.replicas.co.kr/shop/shopbrand.html?type=N&xcode=035&mcode=002" target="_blank"
+                   role="button">자세히 보기</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!--주문 정보 입력란-->
+    <form class="form-wrap">
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">주문자 이름</label>
+            <input class="form-control" id="exampleFormControlInput1" placeholder="성함을 입력해주세요">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">수량</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">주소</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">전화번호</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+        </div>
+
+        <div class="order">
+            <button onclick="order()" type="button" class="btn btn-warning">주문하기</button>
+        </div>
+    </form>
+
+
+    <!--하단 표-->
+    <table class="table table-sm">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">주문자</th>
+            <th scope="col">주문일시</th>
+            <th scope="col">품목명</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>코기</td>
+            <td>2020/07/02</td>
+            <td>웰시코기 블럭</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>폴드</td>
+            <td>2020/07/10</td>
+            <td>스코티쉬 폴드 블럭 외 1</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>러시안</td>
+            <td>2020/07/17</td>
+            <td>러시안 블루 블럭 외 3</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+</body>
+</html>
